@@ -5,6 +5,7 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face { font-family: Amsterdam; src: url('../fonts/AmsterdamOne.ttf'); } 
 /* =======================================================
 *
 * 	Template Style 
@@ -47,13 +48,13 @@ body {
 }
 
 a {
-  color: #596a30;
+  color: #646464;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 a:hover, a:active, a:focus {
-  color: #596a30;
+  color: #646464;
   outline: none;
   text-decoration: none;
 }
@@ -71,17 +72,17 @@ h1, h2, h3, h4, h5, h6, figure {
 
 ::-webkit-selection {
   color: #fff;
-  background: #596a30;
+  background: #646464;
 }
 
 ::-moz-selection {
   color: #fff;
-  background: #596a30;
+  background: #646464;
 }
 
 ::selection {
   color: #fff;
-  background: #596a30;
+  background: #646464;
 }
 
 .fh5co-nav {
@@ -103,7 +104,7 @@ h1, h2, h3, h4, h5, h6, figure {
   margin: 0;
   padding: 0;
   line-height: 40px;
-  font-family: "CustomFont", Arial, serif;
+  font-family: "Sofia Sans Condensed";
 }
 .fh5co-nav a {
   padding: 5px 10px;
@@ -125,7 +126,8 @@ h1, h2, h3, h4, h5, h6, figure {
   display: inline;
 }
 .fh5co-nav ul li a {
-  font-size: 14px;
+  font-size: 20px;
+  font-family: Sofia Sans Condensed;
   padding: 30px 10px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.5);
@@ -196,7 +198,7 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #fff;
 }
 .fh5co-nav ul li.btn-cta a {
-  color: #596a30;
+  color: #646464;
 }
 .fh5co-nav ul li.btn-cta a span {
   background: #fff;
@@ -296,7 +298,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .fh5co-cover {
-  height: 900px;
+  height: 1000px;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -317,7 +319,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover {
-    height: 600px;
+    height: 900px;
   }
 }
 .fh5co-cover .display-t,
@@ -368,11 +370,11 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 #fh5co-counter .fh5co-heading h2,
 #fh5co-event .fh5co-heading h2 {
-  color: #fff;
+  color: #646464;
 }
 #fh5co-counter .fh5co-heading span,
 #fh5co-event .fh5co-heading span {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgb(0, 0, 0);
   text-transform: uppercase;
   font-size: 13px;
   letter-spacing: 2px;
@@ -385,7 +387,7 @@ h1, h2, h3, h4, h5, h6, figure {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.04);
 }
 @media screen and (max-width: 768px) {
   #fh5co-counter,
@@ -402,8 +404,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 #fh5co-counter .event-wrap,
 #fh5co-event .event-wrap {
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(0, 0, 0, 0.5);
   padding: 30px;
   width: 100%;
   float: left;
@@ -420,23 +421,27 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 #fh5co-counter .event-wrap h3,
 #fh5co-event .event-wrap h3 {
-  font-size: 20px;
-  color: #fff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  color: #000000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   display: block;
   padding-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  font-family: Sofia Sans Condensed;
+  font-size: 25px;
 }
 #fh5co-counter .event-wrap p, #fh5co-counter .event-wrap span,
 #fh5co-event .event-wrap p,
 #fh5co-event .event-wrap span {
   display: block;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.8);
+  font-family: Sofia Sans Condensed;
+  font-size: 20px;
 }
 #fh5co-counter .event-wrap i,
 #fh5co-event .event-wrap i {
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 20px;
 }
 #fh5co-counter .event-wrap .event-col,
@@ -768,7 +773,7 @@ h1, h2, h3, h4, h5, h6, figure {
   display: inline-block;
   zoom: 1;
   *display: inline;
-  color: #596a30;
+  color: #646464;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -787,7 +792,7 @@ h1, h2, h3, h4, h5, h6, figure {
   position: relative;
 }
 .fh5co-contact-info ul li:before {
-  color: #596a30;
+  color: #646464;
   position: absolute;
   left: 0;
   top: .05em;
@@ -828,6 +833,7 @@ form label {
 .fh5co-cover .display-tc {
   display: table-cell !important;
   vertical-align: middle;
+  padding-top: 130px;
 }
 #fh5co-header .display-tc h1, #fh5co-header .display-tc h2,
 #fh5co-counter .display-tc h1,
@@ -842,9 +848,9 @@ form label {
 #fh5co-counter .display-tc h1,
 .fh5co-cover .display-tc h1 {
   margin-bottom: 0px;
-  font-size: 80px;
+  font-size: 65px;
   line-height: 1.5;
-  font-family: "CustomFont", Arial, serif;
+  font-family: "Amsterdam", Arial, serif;
 }
 @media screen and (max-width: 768px) {
   #fh5co-header .display-tc h1,
@@ -865,7 +871,8 @@ form label {
 .fh5co-cover .display-tc h2 {
   font-size: 20px;
   line-height: 1.5;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  font-family: Engagement;
 }
 @media screen and (max-width: 480px) {
   #fh5co-header .display-tc h2,
@@ -877,11 +884,12 @@ form label {
 #fh5co-header .display-tc .btn,
 #fh5co-counter .display-tc .btn,
 .fh5co-cover .display-tc .btn {
-  padding: 15px 20px;
+  padding: 20px 20px;
   background: #fff !important;
-  color: #596a30;
+  color: #646464;
   border: none !important;
-  font-size: 14px;
+  font-size: 16px;
+  font-family: Sofia Sans Condensed;
   text-transform: uppercase;
 }
 #fh5co-header .display-tc .btn:hover,
@@ -935,60 +943,12 @@ form label {
 .simply-countdown {
   /* The countdown */
   margin-bottom: 2em;
+  margin-top: 2em;
+
+
 }
 
-.simply-countdown > .simply-section {
-  /* coutndown blocks */
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  background: #92a760;
-  margin: 0 4px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%;
-  position: relative;
-  animation: pulse 1s ease infinite;
-}
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-.simply-countdown > .simply-section > div {
-  /* countdown block inner div */
-  display: table-cell;
-  vertical-align: middle;
-  height: 100px;
-  width: 100px;
-}
-
-.simply-countdown > .simply-section .simply-amount,
-.simply-countdown > .simply-section .simply-word {
-  display: block;
-  color: white;
-  /* amounts and words */
-}
-
-.simply-countdown > .simply-section .simply-amount {
-  font-size: 30px;
-  /* amounts */
-}
-
-.simply-countdown > .simply-section .simply-word {
-  color: rgba(255, 255, 255, 0.7);
-  text-transform: uppercase;
-  font-size: 12px;
-  /* words */
-}
 
 #fh5co-testimonial,
 #fh5co-services,
@@ -1043,7 +1003,7 @@ form label {
   font-size: 20px;
   background: #fff;
   padding: 20px;
-  color: #596a30;
+  color: #646464;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -1065,9 +1025,9 @@ form label {
   }
 }
 .couple-half h3 {
-  font-family: "CustomFont", Arial, serif;
-  color: #596a30;
-  font-size: 60px;
+  font-family: "Amsterdam", Arial, serif;
+  color: #646464;
+  font-size: 30px;
 }
 .couple-half .groom, .couple-half .bride {
   float: left;
@@ -1159,7 +1119,7 @@ form label {
   height: 90px;
   font-size: 40px;
   line-height: 40px;
-  color: #596a30;
+  color: #646464;
 }
 .feature-center p, .feature-center h3 {
   margin-bottom: 30px;
@@ -1181,8 +1141,8 @@ form label {
   margin-bottom: 10px;
   line-height: 1.5;
   font-weight: bold;
-  color: #596a30;
-  font-family: "CustomFont", Arial, serif;
+  color: #646464;
+  font-family: "Amsterdam", Arial, serif;
 }
 @media screen and (max-width: 768px) {
   .fh5co-heading h2 {
@@ -1216,7 +1176,7 @@ form label {
   display: block;
 }
 #fh5co-testimonial .wrap-testimony .testimony-slide span a.twitter {
-  color: #596a30;
+  color: #646464;
   font-weight: 300;
 }
 #fh5co-testimonial .wrap-testimony .testimony-slide figure {
@@ -1308,7 +1268,7 @@ form label {
   display: table-cell;
   vertical-align: middle;
   font-size: 30px;
-  color: #596a30;
+  color: #646464;
 }
 .feature-left .feature-copy {
   float: left;
@@ -1374,7 +1334,7 @@ form label {
 #fh5co-started .btn {
   height: 54px;
   border: none !important;
-  background: #596a30;
+  background: #646464;
   color: #fff;
   font-size: 16px;
   text-transform: uppercase;
@@ -1418,7 +1378,7 @@ form label {
 }
 .owl-carousel .owl-controls .owl-dot.active span {
   background: transparent;
-  border: 2px solid #596a30;
+  border: 2px solid #646464;
 }
 
 #fh5co-offcanvas {
@@ -1426,6 +1386,9 @@ form label {
   z-index: 1901;
   width: 270px;
   background: black;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Sofia Sans Condensed; 
   top: 0;
   right: 0;
   top: 0;
@@ -1671,9 +1634,9 @@ form label {
 }
 
 .btn-primary {
-  background: #596a30;
+  background: #646464;
   color: #fff;
-  border: 2px solid #596a30;
+  border: 2px solid #646464;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background: #f366a3 !important;
@@ -1681,11 +1644,11 @@ form label {
 }
 .btn-primary.btn-outline {
   background: transparent;
-  color: #596a30;
-  border: 2px solid #596a30;
+  color: #646464;
+  border: 2px solid #646464;
 }
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-  background: #596a30;
+  background: #646464;
   color: #fff;
 }
 
@@ -1815,7 +1778,7 @@ form label {
 .form-control:active, .form-control:focus {
   outline: none;
   box-shadow: none;
-  border-color: #596a30;
+  border-color: #646464;
 }
 
 .row-pb-md {
@@ -1841,3 +1804,4 @@ form label {
 }
 
 /*# sourceMappingURL=style.css.map */
+
