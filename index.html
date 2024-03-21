@@ -59,6 +59,31 @@
     <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+	<style>
+		html {
+  		scroll-behavior: smooth;
+		}
+	</style>
+    <style>
+		.icon-button {
+  position: absolute;
+  bottom: 10px; /* Adjust as per your design */
+  left: 10px; /* Adjust as per your design */
+  background-color: #007bff;
+  color: rgb(160, 152, 41);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.icon-button i {
+  line-height: 40px;
+}
+	</style>
 	<script>
         function scrollToElement(elementId) {
             const element = document.getElementById(elementId);
@@ -67,24 +92,28 @@
             }
         }
     </script>
-
+	
 </head>
 
 <body>
 
+
     <div class="fh5co-loader"></div>
 
     <div id="page">
+        <button class="icon-button">
+            <i class="fa fa-plus"></i>
+          </button>
         <nav class="fh5co-nav" role="navigation">
             <div class="container">
                 <div class="row">
 
                     <div class="col-xs-10 text-right menu-1">
                         <ul>
-                            <li class="active"><a href="index.html" >Home</a></li>
+                            <li class="active"><a href="index.html" >Trang Chủ</a></li>
                             <li class="active"><a href="javascript:;" onclick="scrollToElement('fh5co-event')">Events</a></li>
-                            <li class="active"><a href="#fh5co-gallery">Gallery</a></li>
-                            <!-- <li class="active"><a href="#fh5co-services">Highlights</a></li> -->
+                            <li class="active"><a href="#fh5co-gallery" >Hình ảnh</a></li>
+                            <li class="active"><a href="#fh5co-register">Đăng ký</a></li>
                         </ul>
                     </div>
                 </div>
@@ -99,7 +128,7 @@
                     <div class="col-md-8 col-md-offset-2 text-center">
                         <div class="display-t">
                             <div class="display-tc animate-box" data-animate-effect="fadeIn">
-                                <h1>Sen &amp; Nhi</h1>
+                                <h1>Đình Sen &amp; Yến Nhi</h1>
                                 <br>
                                 <img src="images/fprint.png" alt="Sen + Nhi">
                                 <h2>14.04.2024</h2>
@@ -154,7 +183,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-                        <h2>Events</h2>
+                        <h2>Sự kiện</h2>
                     </div>
                 </div>
                 <div class="row">
@@ -163,7 +192,7 @@
                             <div class="col-md-10 event-wrap ">
                                 <div class="col-md-6 col-sm-6 text-center">
                                     <div class="animate-box">
-                                        <h2>Wedding</h2>
+                                        <h2>Thư mời</h2>
                                         <div class="event-col">
                                             <i class="icon-calendar"></i>
                                             <span>14.04.2024</span>
@@ -171,7 +200,7 @@
                                         <div class="event-col">
 
                                             <i class="icon-clock"></i>
-                                            <span>12:00 PM</span>
+                                            <span>11:00 AM</span>
                                         </div>
                                         </br>
                                         <p>
@@ -251,7 +280,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-                        <h2>Gallery</h2>
+                        <h2>Hình ảnh</h2>
                     </div>
                 </div>
                 <div class="row row-bottom-padded-md">
@@ -326,7 +355,7 @@
 
         <!-- </div> -->
 		
-        <div id="fh5co-event" class="fh5co-bg">
+        <div id="fh5co-register" class="fh5co-bg">
             <div class="container">
                 <div class="row animate-box">
                     <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
