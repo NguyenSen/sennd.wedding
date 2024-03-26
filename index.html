@@ -11,7 +11,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Sen ❤️ Nhi - 14.04.2024</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="We are getting hitched - The dates are 14th of April '24 and we would like you to be a part of it." />
+    <meta name="description"
+        content="We are getting hitched - The dates are 14th of April '24 and we would like you to be a part of it." />
     <meta name="keywords" content="Sen,Nhi,wedding,website" />
     <meta name="author" content="Sen & Nhi" />
 
@@ -29,7 +30,8 @@
     <meta property="og:image:type" content="image/jpeg">
 
 
-    <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet'
+        type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Engagement" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia+Sans+Condensed" rel="stylesheet">
@@ -59,40 +61,201 @@
     <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-	<style>
-		html {
-  		scroll-behavior: smooth;
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+		body {
+			width: 100%;
+			height: 100%;
+			padding: 0;
+			margin: 0;
 		}
-	</style>
-   
-	<script>
+
+		.popup-item {
+			cursor: pointer;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #FFFFFF;
+			width: 50px;
+			height: 50px;
+			background-color: red;
+			border-radius: 50%;
+		}
+
+		#popup-icon {
+			position: fixed;
+			bottom: 20px;
+			left: 20px;
+			cursor: pointer;
+			z-index: 1000;
+			width: 40px;
+			height: 40px;
+			background-color: red;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.modal.fade .modal-dialog {
+			max-width: 800px;
+			max-height: 100vh;
+			transition: transform 0.3s ease-out;
+			z-index: 5000;
+		}
+
+		.modal {
+			z-index: 5000 !important;
+		}
+
+		.modal-header {
+			background-color: #f23b43;
+
+		}
+
+		.modal-title {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 5px;
+			font-weight: 500;
+			color: #FFFFFF;
+		}
+
+		.modal-lg {
+			width: 90%;
+		}
+
+		.donate-box {
+			display: flex;
+			justify-content: space-evenly;
+			flex-wrap: wrap;
+		}
+
+		.donate-card {
+			width: calc(50% - 40px);
+			margin: 20px;
+			padding: 20px;
+			border: 3px solid #f23b43;
+			border-radius: 10px;
+		}
+
+		@media (max-width: 699px) {
+			.donate-box .donate-card{
+				width:100%;
+				margin: 20px 5px;
+			}
+			.modal .fade .in {
+				text-align: center;
+			}
+		}
+
+		.qr-code-image {
+			max-width: 150px;
+			border: 1px solid #ccc;
+			padding: 3px;
+			margin: auto;
+			display: block;
+		}
+    </style>
+
+    <script>
         function scrollToElement(elementId) {
             const element = document.getElementById(elementId);
+            console.log(element);
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
         }
+        window.onload = scrollToElement
     </script>
-	
+
 </head>
 
 <body>
 
+	<div id="popup-icon" onclick="selectOption()">
+		<svg xmlns="http://www.w3.org/2000/svg" height="20" width="22.5"
+				viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+				<path fill="#ffffff"
+					d="M64 64C28.7 64 0 92.7 0 128V384c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H64zM272 192H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H272c-8.8 0-16-7.2-16-16s7.2-16 16-16zM256 304c0-8.8 7.2-16 16-16H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H272c-8.8 0-16-7.2-16-16zM164 152v13.9c7.5 1.2 14.6 2.9 21.1 4.7c10.7 2.8 17 13.8 14.2 24.5s-13.8 17-24.5 14.2c-11-2.9-21.6-5-31.2-5.2c-7.9-.1-16 1.8-21.5 5c-4.8 2.8-6.2 5.6-6.2 9.3c0 1.8 .1 3.5 5.3 6.7c6.3 3.8 15.5 6.7 28.3 10.5l.7 .2c11.2 3.4 25.6 7.7 37.1 15c12.9 8.1 24.3 21.3 24.6 41.6c.3 20.9-10.5 36.1-24.8 45c-7.2 4.5-15.2 7.3-23.2 9V360c0 11-9 20-20 20s-20-9-20-20V345.4c-10.3-2.2-20-5.5-28.2-8.4l0 0 0 0c-2.1-.7-4.1-1.4-6.1-2.1c-10.5-3.5-16.1-14.8-12.6-25.3s14.8-16.1 25.3-12.6c2.5 .8 4.9 1.7 7.2 2.4c13.6 4.6 24 8.1 35.1 8.5c8.6 .3 16.5-1.6 21.4-4.7c4.1-2.5 6-5.5 5.9-10.5c0-2.9-.8-5-5.9-8.2c-6.3-4-15.4-6.9-28-10.7l-1.7-.5c-10.9-3.3-24.6-7.4-35.6-14c-12.7-7.7-24.6-20.5-24.7-40.7c-.1-21.1 11.8-35.7 25.8-43.9c6.9-4.1 14.5-6.8 22.2-8.5V152c0-11 9-20 20-20s20 9 20 20z" />
+			</svg>
+	</div>
+
+	<div class="modal fade" id="popup-modal">
+		<div class="modal-dialog  modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">
+						<span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
+								class="bi bi-coin" viewBox="0 0 16 16">
+								<path
+									d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9H5.5zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518l.087.02z">
+								</path>
+								<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+								<path
+									d="M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11zm0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12z">
+								</path>
+							</svg>
+						</span>
+						<span style="font-size: 30px; font-weight: 700;">Hộp mừng cưới</span>
+					</h5>
+				</div>
+				<div class="modal-body">
+					<div class="donate-box">
+						 <div class="donate-card">
+                            <div class="text-center">
+                                <h2 style="font-family: Amsterdam, Arial, serif;">Mừng cưới đến chú rễ</h2>
+                            </div>
+                            <img class="qr-code-image"
+                                src="images/cr_qr.png">
+                            <div style="margin-top: 8px;">
+                                <h5>Ngân hàng: <strong>ACB</strong></h5>
+                                <h5>Tên tài khoản:<strong>Nguyễn Đình Sen</strong></h5>
+                                <h5>Số tài khoản:<strong>17406067</strong></h5>
+                            </div>
+                        </div>
+                        <div class="donate-card">
+                            <div class="text-center">
+                                <h2 style="font-family: Amsterdam, Arial, serif;">Mừng cưới đến cô dâu</h2>
+                            </div>
+                            <img class="qr-code-image"
+                                src="images/cd_qr.png">
+                            <div style="margin-top: 8px;">
+                                <h5>Ngân hàng:<strong>TECHCOMBANK</strong></h5>
+                                <h5>Tên tài khoản:<strong>Phi Trần Yến Nhi</strong></h5>
+                                <h5>Số tài khoản:<strong>19033473887017</strong></h5>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function selectOption() {
+			$('#popup-modal').modal('show');
+		}
+	</script>
 
     <div class="fh5co-loader"></div>
 
     <div id="page">
-        
+
         <nav class="fh5co-nav" role="navigation">
             <div class="container">
                 <div class="row">
 
                     <div class="col-xs-10 text-right menu-1">
                         <ul>
-                            <li class="active"><a href="index.html" >Trang Chủ</a></li>
-                            <li class="active"><a href="javascript:;" onclick="scrollToElement('fh5co-event')">Events</a></li>
-                            <li class="active"><a href="#fh5co-gallery" >Hình ảnh</a></li>
-                            <li class="active"><a href="#fh5co-register">Đăng ký</a></li>
+                            <li class="active"><a href="">Trang Chủ</a></li>
+                            <li class="active"><a href="#fh5co-event" onclick="scrollToElement('fh5co-event')">Sự kiện</a></li>
+                            <li class="active"><a href="#fh5co-gallery" onclick="scrollToElement('fh5co-gallery')">Hình ảnh</a></li>
+                            <li class="active"><a href="#fh5co-register" onclick="scrollToElement('fh5co-register')">Đăng ký</a></li>
                         </ul>
                     </div>
                 </div>
@@ -100,7 +263,8 @@
             </div>
         </nav>
 
-        <header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/bg.jpg);" data-stellar-background-ratio="0.5">
+        <header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/bg.jpg);"
+            data-stellar-background-ratio="0.5">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row">
@@ -123,41 +287,42 @@
             </div>
         </header>
 
-		<div id="fh5co-couple1">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					
-					<h3></h3>
-					<p>We invited you to celebrate our wedding</p>
-				</div>
-			</div>
-			<div class="couple-wrap animate-box">
-				<div class="couple-half">
-					<div class="groom">
-						<img src="images/groom.jpg" alt="groom" class="img-responsive">
-					</div>
-					<div class="desc-groom">
-						<h3>Đình Sen</h3>
-						<p>Chàng trai IT hiền lành, dễ thương. Là một người đàn ông có trách nhiệm, biết quan tâm và sống tử tế với tất cả mọi người</p>
-					</div>
-				</div>
-				<p class="heart text-center"><i class="icon-heart2"></i></p>
-				<div class="couple-half">
-					<div class="bride">
-						<img src="images/bride.jpg" alt="groom" class="img-responsive">
-					</div>
-					<div class="desc-bride">
-						<h3>Yến Nhi</h3>
-						<p>Đây đích thị là cô gái HR năng động, vui tươi, tích cực. Mặc dù cô ấy hơi vụng về nhưng không ngừng cố gắng để làm tốt nhất mọi việc trong khả năng của mình</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div id="fh5co-couple1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+
+                        <h3></h3>
+                        <p>We invited you to celebrate our wedding</p>
+                    </div>
+                </div>
+                <div class="couple-wrap animate-box">
+                    <div class="couple-half">
+                        <div class="groom">
+                            <img src="images/groom.jpg" alt="groom" class="img-responsive">
+                        </div>
+                        <div class="desc-groom">
+                            <h3>Đình Sen</h3>
+                            <p>Chàng trai IT hiền lành, dễ thương. Là một người đàn ông có trách nhiệm, biết quan tâm và
+                                sống tử tế với tất cả mọi người</p>
+                        </div>
+                    </div>
+                    <p class="heart text-center"><i class="icon-heart2"></i></p>
+                    <div class="couple-half">
+                        <div class="bride">
+                            <img src="images/bride.jpg" alt="groom" class="img-responsive">
+                        </div>
+                        <div class="desc-bride">
+                            <h3>Yến Nhi</h3>
+                            <p>Đây đích thị là cô gái HR năng động, vui tươi, tích cực. Mặc dù cô ấy hơi vụng về nhưng
+                                không ngừng cố gắng để làm tốt nhất mọi việc trong khả năng của mình</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div id="fh5co-event" class="fh5co-bg">
-		
             <div class="overlay"></div>
             <div class="container">
                 <div class="row">
@@ -184,14 +349,17 @@
                                         </br>
                                         <p>
                                             Trung Tâm Hội Nghị Tiệc Cưới Royal Palace
-                                            <br/> 98 Phan Văn Hớn, Tân Thới Nhất, Quận 12, Thành phố Hồ Chí Minh, Vietnam
+                                            <br /> 98 Phan Văn Hớn, Tân Thới Nhất, Quận 12, Thành phố Hồ Chí Minh,
+                                            Vietnam
                                         </p>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-6 text-center">
                                     <div class="animate-box">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3918.7793593736906!2d106.62009495105862!3d10.828190084136974!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752bd0f0277139%3A0xf0a1738e26f632f5!2zVHJ1bmcgVMOibSBI4buZaSBOZ2jhu4sgVGnhu4djIEPGsOG7m2kgUm95YWwgUGFsYWNl!5e0!3m2!1sen!2sus!4v1710771960458!5m2!1sen!2sus"
-                                            width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3918.7793593736906!2d106.62009495105862!3d10.828190084136974!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752bd0f0277139%3A0xf0a1738e26f632f5!2zVHJ1bmcgVMOibSBI4buZaSBOZ2jhu4sgVGnhu4djIEPGsOG7m2kgUm95YWwgUGFsYWNl!5e0!3m2!1sen!2sus!4v1710771960458!5m2!1sen!2sus"
+                                            width="100%" height="400" frameborder="0" style="border:0;"
+                                            allowfullscreen=""></iframe>
                                     </div>
                                 </div>
                             </div>
@@ -200,61 +368,68 @@
                 </div>
             </div>
         </div>
-		<div id="fh5co-couple-story">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					<!-- <span>We Love Each Other</span> -->
-					<h2>Chuyện Tình Yêu</h2>
-					<!-- <p>Far far away,behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p> -->
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 col-md-offset-0">
-					<ul class="timeline animate-box">
-						<li class="animate-box">
-							<div class="timeline-badge" style="background-image:url(images/RS1.jpg);"></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title" style="color: #596a30;">Lần gặp mặt định mệnh</h3>
-									<!-- <span class="date">December 25, 2015</span> -->
-								</div>
-								<div class="timeline-body">
-									<p>
-										Bắt đầu từ một buổi cà phê tán ngẫu. Tưởng chừng, đây là một buổi gặp gỡ bạn bè đơn thuần nhưng bất ngờ thay buổi gặp ấy chính là sợi dây định mệnh kết nối chúng tôi với nhau									</p>
-								</div>
-							</div>
-						</li>
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge" style="background-image:url(images/RS2.jpg);"></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title"style="color: #596a30;">Lời tỏ tình</h3>
-									<!-- <span class="date">December 28, 2015</span> -->
-								</div>
-								<div class="timeline-body">
-									<p>Cao thủ không bằng tranh thủ... Ngày lễ tình nhân 14/02/2022 năm ấy, chúng tớ cũng có một buổi đi chơi cùng nhau. Và thế là, chuyện gì đến cũng đến cô gái đã bẽn lẽn "gật đầu" đồng ý làm bạn gái của chàng trai</p>
-								</div>
-							</div>
-						</li>
-						<li class="animate-box">
-							<div class="timeline-badge" style="background-image:url(images/RS3.jpg);"></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title" style="color: #596a30;">Hẹn Hò</h3>
-									<!-- <span class="date">January 1, 2016</span> -->
-								</div>
-								<div class="timeline-body">
-									<p>Cũng như bao nhiêu cặp đôi khác, chúng tôi cũng có những buổi hẹn hò cười tít mắt, những rồi cũng có những ngày giận hờn vu vơ. Trong giai đoạn này, tính cách của hai đứa bắt đầu bộc lộ rõ ràng hơn (kể cả những tính xấu nữa hihi). 
-										Nhưng càng hiểu lại càng thương còn thương như thế nào thì.....chỉ riêng chúng tôi biết :)))))</p>
-								</div>
-							</div>
-						</li>
-			    	</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div id="fh5co-couple-story">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+                        <!-- <span>We Love Each Other</span> -->
+                        <h2>Chuyện Tình Yêu</h2>
+                        <!-- <p>Far far away,behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p> -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-md-offset-0">
+                        <ul class="timeline animate-box">
+                            <li class="animate-box">
+                                <div class="timeline-badge" style="background-image:url(images/RS1.jpg);"></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title" style="color: #596a30;">Lần gặp mặt định mệnh</h3>
+                                        <!-- <span class="date">December 25, 2015</span> -->
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>
+                                            Bắt đầu từ một buổi cà phê tán ngẫu. Tưởng chừng, đây là một buổi gặp gỡ bạn
+                                            bè đơn thuần nhưng bất ngờ thay buổi gặp ấy chính là sợi dây định mệnh kết
+                                            nối chúng tôi với nhau </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted animate-box">
+                                <div class="timeline-badge" style="background-image:url(images/RS2.jpg);"></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title" style="color: #596a30;">Lời tỏ tình</h3>
+                                        <!-- <span class="date">December 28, 2015</span> -->
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Cao thủ không bằng tranh thủ... Ngày lễ tình nhân 14/02/2022 năm ấy, chúng tớ
+                                            cũng có một buổi đi chơi cùng nhau. Và thế là, chuyện gì đến cũng đến cô gái
+                                            đã bẽn lẽn "gật đầu" đồng ý làm bạn gái của chàng trai</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="animate-box">
+                                <div class="timeline-badge" style="background-image:url(images/RS3.jpg);"></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title" style="color: #596a30;">Hẹn Hò</h3>
+                                        <!-- <span class="date">January 1, 2016</span> -->
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Cũng như bao nhiêu cặp đôi khác, chúng tôi cũng có những buổi hẹn hò cười tít
+                                            mắt, những rồi cũng có những ngày giận hờn vu vơ. Trong giai đoạn này, tính
+                                            cách của hai đứa bắt đầu bộc lộ rõ ràng hơn (kể cả những tính xấu nữa hihi).
+                                            Nhưng càng hiểu lại càng thương còn thương như thế nào thì.....chỉ riêng
+                                            chúng tôi biết :)))))</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div id="fh5co-gallery" class="fh5co-section-gray">
             <div class="container">
                 <div class="row">
@@ -266,38 +441,44 @@
                     <div class="col-md-12">
                         <ul id="fh5co-gallery-list">
 
-                            <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/G1.jpg); ">
+                            <li class="one-third animate-box" data-animate-effect="fadeIn"
+                                style="background-image: url(images/G1.jpg); ">
                                 <a href="images/G1.jpg">
                                     <div class="case-studies-summary">
                                     </div>
                                 </a>
                             </li>
 
-                            <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/G2.jpg); ">
+                            <li class="one-third animate-box" data-animate-effect="fadeIn"
+                                style="background-image: url(images/G2.jpg); ">
                                 <a href="images/G2.jpg">
                                     <div class="case-studies-summary">
                                     </div>
                                 </a>
                             </li>
-                            <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/G3.jpg); ">
+                            <li class="one-third animate-box" data-animate-effect="fadeIn"
+                                style="background-image: url(images/G3.jpg); ">
                                 <a href="images/G3.jpg">
                                     <div class="case-studies-summary">
                                     </div>
                                 </a>
                             </li>
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/G4.jpg); ">
+                            <li class="one-third animate-box" data-animate-effect="fadeIn"
+                                style="background-image: url(images/G4.jpg); ">
                                 <a href="images/G4.jpg">
                                     <div class="case-studies-summary">
                                     </div>
                                 </a>
                             </li>
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/G5.jpg); ">
+                            <li class="one-third animate-box" data-animate-effect="fadeIn"
+                                style="background-image: url(images/G5.jpg); ">
                                 <a href="images/G5.jpg">
                                     <div class="case-studies-summary">
                                     </div>
                                 </a>
                             </li>
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/G6.jpg); ">
+                            <li class="one-third animate-box" data-animate-effect="fadeIn"
+                                style="background-image: url(images/G6.jpg); ">
                                 <a href="images/G6.jpg">
                                     <div class="case-studies-summary">
                                     </div>
@@ -309,32 +490,7 @@
                 </div>
             </div>
         </div>
-
-
-
-        <!-- <div id="fh5co-services" class="fh5co-section-gray"> -->
-            <!-- <div class="container"> -->
-
-                <!-- <div class="row animate-box"> -->
-                    <!-- <div class="col-md-8 col-md-offset-2 text-center fh5co-heading"> -->
-                        <!-- <h2>Highlights</h2> -->
-
-                    <!-- </div> -->
-                <!-- </div> -->
-
-
-
-                <!-- <div class="container animate-box"> -->
-                    <!-- <div class="fh5co-video fh5co-bg" style="background-image: url(images/img_bg_3.jpg); "> -->
-                        <!-- <a href="#" class="popup-vimeo"><i class="icon-video2"></i></a> -->
-                        <!-- <div class="overlay"></div> -->
-                    <!-- </div> -->
-                <!-- </div> -->
-            <!-- </div> -->
-
-        <!-- </div> -->
-		
-        <div id="fh5co-register" class="fh5co-bg">
+        <div id="fh5co-register" class="fh5co-section-gray">
             <div class="container">
                 <div class="row animate-box">
                     <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
@@ -343,14 +499,15 @@
                     </div>
                 </div>
                 <div class="container animate-box">
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdYt93AC7RK5JkmfhsVUTpw0xoxw8R6lUgRawwseibZUJ-OCg/viewform?embedded=true" width="100%" height="1400" frameborder="0" style="border:0;" allowfullscreen="">Loading…</iframe>
+                    <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSdYt93AC7RK5JkmfhsVUTpw0xoxw8R6lUgRawwseibZUJ-OCg/viewform?embedded=true"
+                        width="100%" height="1400" frameborder="0" style="border:0;"
+                        allowfullscreen="">Loading…</iframe>
                 </div>
-
-
             </div>
-
         </div>
     </div>
+
     <div class="gototop js-top">
         <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
     </div>
@@ -370,7 +527,8 @@
     <!-- countTo -->
     <script src="js/jquery.countTo.js"></script>
     <script src='https://momentjs.com/downloads/moment.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.14/moment-timezone-with-data-2012-2022.min.js'></script>
+    <script
+        src='https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.14/moment-timezone-with-data-2012-2022.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.js'></script>
     <!-- Stellar -->
     <script src="js/jquery.stellar.min.js"></script>
