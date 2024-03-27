@@ -12,7 +12,7 @@
 *
 * ======================================================= */
 body {
-  font-family: "Work Sans", Arial, sans-serif;
+  font-family:  Arial, sans-serif,"Work Sans";
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
@@ -65,7 +65,7 @@ p {
 
 h1, h2, h3, h4, h5, h6, figure {
   color: #000;
-  font-family: "Work Sans", Arial, sans-serif;
+  font-family:Arial, sans-serif, "Work Sans";
   font-weight: 400;
   margin: 0 0 20px 0;
 }
@@ -436,7 +436,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-event .event-wrap span {
   display: block;
   color: rgba(0, 0, 0, 0.8);
-  font-family: Roboto,Arial,sans-serif;
+  font-family: Arial,sans-serif,Roboto;
   font-size: 20px;
 }
 #fh5co-counter .event-wrap i,
