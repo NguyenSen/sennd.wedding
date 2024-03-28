@@ -168,6 +168,11 @@
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }
+            if ($('body').hasClass('overflow offcanvas')) {
+                    $('body').removeClass('overflow offcanvas');
+                    $('.js-fh5co-nav-toggle').removeClass('active');
+                }
+             
         }
         window.onload = scrollToElement
     </script>

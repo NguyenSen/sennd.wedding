@@ -15,6 +15,7 @@
                     $('.js-fh5co-nav-toggle').removeClass('active');
                 }
             }
+            
         });
 
     };
@@ -61,6 +62,9 @@
 
             }
         });
+        if ($('body').hasClass('overflow offcanvas')) {
+            $('body').removeClass('overflow offcanvas');
+        }
     };
 
 
